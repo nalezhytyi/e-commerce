@@ -22,6 +22,10 @@
     color: black;
     border: 1px solid black;
   }
+  &:active {
+    background-color: lightgrey;
+    color: black;
+  }
 
   &.google-sign-in {
     background-color: dodgerblue;
@@ -42,7 +46,9 @@
     &:hover {
       background-color: black;
       color: white;
-      border: none;
+    }
+    &:active {
+      background-color: #1f1e1d;
     }
   }
 }
