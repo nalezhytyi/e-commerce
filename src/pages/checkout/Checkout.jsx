@@ -2,7 +2,7 @@ import React from 'react';
 import './Checkout.styles.scss';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import empty from '../../assets/images/empty-cart.png'
+import empty from '../../assets/images/empty-cart.svg'
 
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/CheckoutItem';
@@ -44,7 +44,7 @@ const Checkout = ({ cartItems, total, history }) => (
             :
             <div className='checkout-empty'>
                 <h2>Your cart is empty</h2>
-                <img className='image' src={empty} alt='image'/>
+                <img className='image' src={empty} alt='empty-cart-image'/>
                 <CustomButton onClick={() => history.push('/shop')}>GO SHOPPING</CustomButton>
             </div>
         }
