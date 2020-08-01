@@ -1,4 +1,5 @@
 import React from 'react';
+import image from '../../assets/images/shop.svg'
 import StripeCheckout from 'react-stripe-checkout';
 
 const StripeButton = ({ price }) => {
@@ -13,7 +14,7 @@ const StripeButton = ({ price }) => {
         name='Clothing Ltd.'
         billingAddress
         shippingAddress
-        image='https://svgshare.com/i/CUz.svg'
+        image={image}
         description={`Your total is $${price}`}
         amount={priceForStripe}
         panelLabel='Pay Now'
