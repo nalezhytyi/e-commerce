@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAClB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,aAAa,EAAE,IAAI;CASpB;;AAZD,AAIE,mBAJiB,CAIjB,MAAM,CAAC;EACL,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI;CACpB;;AAPH,AAQE,mBARiB,CAQjB,QAAQ,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAC/B",
+    "sources": [
+        "../src/components/collection-preview/CollectionPreview.scss"
+    ],
+    "names": [],
+    "file": "CollectionPreview.css"
+}
