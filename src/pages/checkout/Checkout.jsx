@@ -44,7 +44,7 @@ const Checkout = ({ cartItems, total, history }) => (
             :
             <div className='checkout-empty'>
                 <h2>Your cart is empty</h2>
-                <img className='image' src={empty} alt='empty-cart-image'/>
+                <img className='image' src={empty} alt='empty-cart' />
                 <CustomButton onClick={() => history.push('/shop')}>GO SHOPPING</CustomButton>
             </div>
         }
