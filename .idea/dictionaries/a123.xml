@@ -1,8 +1,10 @@
 <component name="ProjectDictionaryState">
   <dictionary name="a123">
     <words>
+      <w>axios</w>
       <w>middlewares</w>
       <w>persistor</w>
+      <w>signin</w>
     </words>
   </dictionary>
 </component>
