@@ -11,7 +11,9 @@ const Contact = () => {
                 <div>
                     <a href='mailto:kawory05@gmail.com'>kawory05@gmail.com</a>
                 </div>
-                <img style={{ width: '40%', marginTop: 35 }} src={dog} alt='i have no idea what ima doing' />
+                <div>
+                    <img style={{ width: '100%', marginTop: 35 }} src={dog} alt='i have no idea what ima doing' />
+                </div>
             </div>
         </animated.div>
     );
