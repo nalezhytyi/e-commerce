@@ -9,11 +9,14 @@ import {
     Name,
     Price
 } from './CollectionItem.styles';
+import { useSpring } from 'react-spring';
 
 const CollectionItem = ({ item, addItem }) => {
+    const props = useSpring({ opacity: 1, from: { opacity: 0 } })
     const { name, price, imageUrl } = item;
-    return <CollectionItemContainer>
-        <CollectionImage imageUrl={imageUrl}/>
+
+    return <CollectionItemContainer style={props}>
+        <CollectionImage imageUrl={imageUrl} />
         <CollectionFooter>
             <Name>{name}</Name>
             <Price>{price}$</Price>

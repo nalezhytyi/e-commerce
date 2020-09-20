@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import CustomButton from '../custom-button/CustomButton';
+import { animated } from 'react-spring';
 
-export const CollectionItemContainer = styled.div`
+export const CollectionItemContainer = styled(animated.div)`
   width: 22vw;
   display: flex;
   flex-direction: column;

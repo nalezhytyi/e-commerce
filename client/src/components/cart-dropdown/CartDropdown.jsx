@@ -1,30 +1,33 @@
 import React from 'react';
-import './CartDropdown.styles.scss'
-import CustomButton from '../custom-button/CustomButton';
 import CartItem from '../cart-item/CartItem';
 import { connect } from 'react-redux';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { ButtonToShopping, CartDropdownContainer, CartItems, EmptyMessage } from './CartDropdown.styles';
+import { useSpring } from 'react-spring'
 
-const CartDropdown = ({ cartItems, history, dispatch }) => (
-    <div className='cart-dropdown'>
-        <div className='cart-items'>
-            {cartItems.length ?
-                cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)
-                :
-                <span className='empty-message'>Your cart is empty</span>
-            }
-        </div>
-        <CustomButton onClick={() => {
-            history.push('/checkout');
-            dispatch(toggleCartHidden())
-        }}>
-            GO TO CHECKOUT
-        </CustomButton>
-    </div>
-)
+const CartDropdown = ({ cartItems, history, dispatch }) => {
+    const props = useSpring({ opacity: 1, from: { opacity: 0 } })
+    return (
+            <CartDropdownContainer style={props}>
+                <CartItems>
+                    {cartItems.length ?
+                        cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)
+                        :
+                        <EmptyMessage>Your cart is empty</EmptyMessage>
+                    }
+                </CartItems>
+                <ButtonToShopping onClick={() => {
+                    history.push('/checkout');
+                    dispatch(toggleCartHidden())
+                }}>
+                    GO TO CHECKOUT
+                </ButtonToShopping>
+            </CartDropdownContainer>
+    )
+}
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems

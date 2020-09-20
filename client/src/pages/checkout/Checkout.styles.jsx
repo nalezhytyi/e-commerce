@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
-export const CheckoutPageContainer = styled.div`
+export const CheckoutPageContainer = styled(animated.div)`
   width: 55%;
   min-height: 90vh;
   display: flex;
@@ -43,7 +44,7 @@ export const TestWarning = styled.div`
   color: red;
   font-size: 24px;
 `
-export const CheckoutEmpty = styled.div`
+export const CheckoutEmpty = styled(animated.div)`
   margin: 50px auto 0;
   display: flex;
   align-items: center;

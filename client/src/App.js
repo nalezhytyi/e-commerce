@@ -15,6 +15,7 @@ const HomePage = lazy(() => import('./pages/homepage/Home'))
 const ShopPage = lazy(() => import('./pages/shop/Shop'))
 const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/SignInAndSignUp'))
 const CheckoutPage = lazy(() => import('./pages/checkout/Checkout'))
+const ContactPage = lazy(() => import('./pages/contact/Contact'))
 
 const App = ({ currentUser, checkUserSession }) => {
     useEffect(() => {
@@ -32,6 +33,7 @@ const App = ({ currentUser, checkUserSession }) => {
                     <Route exact path='/signin'
                            render={() => currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)} />
                     <Route exact path='/checkout' component={CheckoutPage} />
+                    <Route exact path='/contact' component={ContactPage} />
                 </Suspense>
             </Switch>
         </div>

@@ -8,6 +8,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    
         @media screen and (max-width: 800px) {
           height: 60px; 
           padding: 10px;
@@ -19,6 +20,7 @@ export const LogoContainer = styled(Link)`
     height: 70px;
     width: 70px;
     padding: 10px;
+    
         @media screen and (max-width: 800px) {
         height: 60px;
           width: 50px;
@@ -29,6 +31,7 @@ export const LogoContainer = styled(Link)`
 export const Logo = styled(ShopLogo)`
     width: 100%;
     height: 100%;
+    
         @media screen and (max-width: 800px) {
           width: 80%;
           height: 80%;
@@ -41,6 +44,8 @@ export const OptionsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
+    
         @media screen and (max-width: 800px) {
           width: 80%;
         }

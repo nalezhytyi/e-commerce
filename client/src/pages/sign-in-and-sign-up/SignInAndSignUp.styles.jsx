@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
-export const SignInAndSignUpContainer = styled.div`
+export const SignInAndSignUpContainer = styled(animated.div)`
   width: 850px;
   display: flex;
   justify-content: space-between;
