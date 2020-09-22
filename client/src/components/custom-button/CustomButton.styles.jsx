@@ -22,7 +22,7 @@ const invertedButtonStyles = css`
         color: white;
         }
 
-        &:active {
+        &:active:focus {
         background-color: lightgrey;
         color: black;
         }
@@ -68,4 +68,5 @@ export const CustomButtonContainer = styled.button`
 
 ${getButtonStyles}
 `;
+
 
