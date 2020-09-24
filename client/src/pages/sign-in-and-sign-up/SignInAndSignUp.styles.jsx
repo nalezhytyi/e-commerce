@@ -6,11 +6,11 @@ export const SignInAndSignUpContainer = styled(animated.div)`
   display: flex;
   justify-content: space-between;
   margin: 30px auto;
-    
-    @media screen and (max-width: 950px) {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        justify-content: center;
-    }
-`
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+`;

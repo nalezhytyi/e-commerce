@@ -7,11 +7,11 @@ export const ContactPageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const ContactPageText = styled.p`
   padding: 0 15px;
-`
+`;
 
 export const ContactImageContainer = styled.div`
   display: inline-block;
@@ -21,5 +21,3 @@ export const ContactImageContainer = styled.div`
   width: 40vh;
   height: 40vh;
 `;
-
-

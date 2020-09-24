@@ -6,12 +6,12 @@ export const ErrorBoundaryContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-`
+  align-items: center;
+`;
 
 export const ErrorBoundaryText = styled.p`
   padding: 0 15px;
-`
+`;
 
 export const ErrorImageContainer = styled.div`
   display: inline-block;
@@ -21,5 +21,3 @@ export const ErrorImageContainer = styled.div`
   width: 40vh;
   height: 40vh;
 `;
-
-

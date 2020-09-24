@@ -1,72 +1,70 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-    background-color: black;
-    color: white;
-    border: none;
+  background-color: black;
+  color: white;
+  border: none;
 
-        &:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-        }
-`
-const invertedButtonStyles = css`
+  &:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
-    transition: all 0.5s ease 0.1s;
+  }
+`;
+const invertedButtonStyles = css`
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.5s ease 0.1s;
 
-        &:hover {
-        background-color: black;
-        color: white;
-        }
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 
-        &:active:focus {
-        background-color: lightgrey;
-        color: black;
-        }
+  &:active:focus {
+    background-color: lightgrey;
+    color: black;
+  }
 `;
 
 const googleSignInStyles = css`
-    background-color: dodgerblue;
-    color: white;
-    border: none;
-    
-        &:hover {
-        background-color: royalblue;
-        }
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: royalblue;
+  }
 `;
 
-const getButtonStyles = props => {
-    if (props.isGoogleSignIn) {
-        return googleSignInStyles;
-    }
-    return props.inverted ? invertedButtonStyles : buttonStyles;
-}
+const getButtonStyles = (props) => {
+  if (props.isGoogleSignIn) {
+    return googleSignInStyles;
+  }
+  return props.inverted ? invertedButtonStyles : buttonStyles;
+};
 
 export const CustomButtonContainer = styled.button`
-    min-width: 165px;
-    width: auto;
-    height: 50px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bolder;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    transition: all 0.5s ease 0.1s;
-    
-        &:active {
-        background-color: lightgrey;
-        color: black;
-        }
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease 0.1s;
 
-${getButtonStyles}
+  &:active {
+    background-color: lightgrey;
+    color: black;
+  }
+
+  ${getButtonStyles}
 `;
-
-

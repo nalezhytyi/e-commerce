@@ -5,13 +5,13 @@ import { SignInAndSignUpContainer } from './SignInAndSignUp.styles';
 import { useSpring } from 'react-spring';
 
 const SignInAndSignUp = () => {
-    const props = useSpring({ opacity: 1, from: { opacity: 0 } })
-    return (
-        <SignInAndSignUpContainer style={props}>
-            <SignIn />
-            <SignUp />
-        </SignInAndSignUpContainer>
-    )
-}
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+  return (
+    <SignInAndSignUpContainer style={props}>
+      <SignIn />
+      <SignUp />
+    </SignInAndSignUpContainer>
+  );
+};
 
-export default SignInAndSignUp
+export default SignInAndSignUp;
