@@ -10,34 +10,38 @@ import { Link } from 'react-router-dom';
 import { signOutStart } from '../../redux/user/user.actions';
 
 const Header = ({ currentUser, hidden, signOutStart }) => {
-    return (
-        <HeaderContainer>
-            <LogoContainer to='/'>
-                <Logo />
-            </LogoContainer>
-            <OptionsContainer>
-                <OptionDiv as={Link} to='/shop'>SHOP</OptionDiv>
-                <OptionDiv as={Link} to='/contact'>CONTACT</OptionDiv>
-                {
-                    currentUser ?
-                        <OptionDiv onClick={signOutStart}>SIGN OUT</OptionDiv>
-                        :
-                        <OptionDiv as={Link} to='/signin'>SIGN IN</OptionDiv>
-                }
-                <CartIcon />
-            </OptionsContainer>
-            {hidden ? null : <CartDropdown />}
-        </HeaderContainer>
-    )
-}
+  return (
+    <HeaderContainer>
+      <LogoContainer to="/">
+        <Logo />
+      </LogoContainer>
+      <OptionsContainer>
+        <OptionDiv as={Link} to="/shop">
+          SHOP
+        </OptionDiv>
+        <OptionDiv as={Link} to="/contact">
+          CONTACT
+        </OptionDiv>
+        {currentUser ? (
+          <OptionDiv onClick={signOutStart}>SIGN OUT</OptionDiv>
+        ) : (
+          <OptionDiv as={Link} to="/signin">
+            SIGN IN
+          </OptionDiv>
+        )}
+        <CartIcon />
+      </OptionsContainer>
+      {hidden ? null : <CartDropdown />}
+    </HeaderContainer>
+  );
+};
 const mapStateToProps = createStructuredSelector({
-    currentUser: selectCurrentUser,
-    hidden: selectCartHidden
-})
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
+});
 
-const mapDispatchToProps = dispatch => ({
-    signOutStart: () => dispatch(signOutStart())
-})
+const mapDispatchToProps = (dispatch) => ({
+  signOutStart: () => dispatch(signOutStart()),
+});
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

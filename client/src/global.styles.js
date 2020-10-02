@@ -11,9 +11,9 @@ body {
     padding: 20px 60px 50px;
     
     @media screen and (max-width: 800px) {
-      padding: 10px;
+       padding: 10px;
     }
-}
+} 
 
 a {
     text-decoration: none;
