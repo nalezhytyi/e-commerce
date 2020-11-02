@@ -1,4 +1,5 @@
 # e-commerce
 (React, Redux, Styled-Components, Firebase, Stripe Checkout, React-Spring)
 
-#If website ref doesn't work, it's because project hosts on Heroku free plan and dyno hours are lost. :(
+# After open attached link wait 10s, project has node.js backend, and heroku need some time to start it.
+# If website ref doesn't work, it's because project hosts on Heroku free plan and dyno hours are lost. :(
